@@ -1,10 +1,10 @@
 /* Step 1: Define color variables using hex values or rgb values */
-/*:root { 
-    /* 1a -  a primary color */
-    /* 1b -  a secondary color */
-    /* 1c -  a text color */
-    /* 1d - the background color for the card */
-/*}*/ 
+:root { 
+    --primary-color: #DFE0E2;
+    --secondary-color: #fff980;
+    --text-color: #071013;
+    --background-color: #23B5D3;
+}*/ 
 
 /* Step 2: Style the card */
 body {
@@ -15,29 +15,35 @@ body {
     height: 100vh;
     margin: 0;
     font-family: sans-serif;
+    background-color: var(--primary-color);
 }
 
 .profile-card {
+
     /* 2a - add a background color using var( )  */
+    background-color: var(--background-color);
     /* 2b - add a background image */
+    /* Wasnt sure if this was meant to be a background-image 
+    in CSS or changing the HTML placeholder */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-
     /* 2c - define the text color using  var( )*/
+    color: var(--text-color);
     /* 2d - add a box shadow using rgba */ 
+    box-shadow : 0 4px 8px rgba(33, 73, 93, 0.778);
   }
   
   /* Step 3: Add styles for the image and text */
     .avatar {
         border-radius: 50%;
         /*3a - set the border to 3px solid & secondary color */
-        /* border: */
+        border: 3px solid var(--secondary-color);
         width: 100px;
         height: 100px;
     }
 
     .bio {
         /* 3b -  set colour to secondary color */
-        /*color:*/
+        color: var(--secondary-color);
     }
