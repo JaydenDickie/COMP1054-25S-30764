@@ -14,25 +14,41 @@ h2 {
 }
 
 /* Level 1 – Use Flexbox to space items evenly in a row */
-.level1 .container {}
+/* I fixed a typo in index.html, rel was "stylsheet" instead of "stylesheet*/
+.level1 .container {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 .level1 .box {
   width: 60px;
   height: 60px;
   background: #4682B4;
   color: #fff;
+
+  /* used this from level 3 to center the numbers in the boxes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Level 2 – Center one item in the middle of the container */
 .level2 .center-container {
   height: 200px;
   background: #eee;
+
+  display: flex;
+  justify-self: center;
 }
 
 .level2 .center-box {
   padding: 20px;
   background: #DC143C;
   color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Level 3 – Make boxes wrap responsively */
@@ -40,6 +56,9 @@ h2 {
   gap: 10px;
   background: #f4f4f4;
   padding: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .level3 .item {
@@ -56,6 +75,7 @@ h2 {
 .level4 .nav-bar {
   background: #333;
   padding: 10px;
+  display: flex;
 }
 
 .level4 .nav-item {
@@ -64,7 +84,11 @@ h2 {
   text-align: center;
 }
 
-.level4 .big {}
+.level4 .big {
+  flex-grow: 1;
+}
+
+/* I didn't get a chance to figure out level 5 so ill be spending more time on this */
 
 /* Level 5 – Full page layout using flexbox 
   Goal: Use Flexbox to build a full-page layout.
@@ -124,5 +148,3 @@ Mobile Layout :
     width: 100%;
   }
 }
-
-
