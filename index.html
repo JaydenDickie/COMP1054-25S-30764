@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="main.css" rel="stylesheet">
-  <title>CSS Challenge #3 - Flexbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet">
+    <title>CSS Grid Auto-Placement Task</title>
 </head>
+
 <body>
-  <h1>CSS Challenge #3 - Flexbox</h1>
-
-  <div class="section level1">
-    <h2>Level 1</h2>
     <div class="container">
-      <div class="box">1</div>
-      <div class="box">2</div>
-      <div class="box">3</div>
-    </div>
-  </div>
 
-  <div class="section level2">
-    <h2>Level 2</h2>
-    <div class="center-container">
-      <div class="center-box">I'm centered</div>
-    </div>
-  </div>
+        <h1> CSS Challenge #4 </h1>
+        <!-- TASK ONE -->
+        <section id="taskone">
+            <h2>Grid Auto-Placement Practice</h2>
+            <p>
+                Create a grid layout with 4 equal-width columns and a 10px gap between all rows and columns.
+                Observe how grid items automatically place themselves.
+            </p>
+            <div class="grid">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <!-- Feel free to add more .item elements here to test behavior -->
+            </div>
+        </section>
 
-  <div class="section level3">
-    <h2>Level 3</h2>
-    <div class="wrap-container">
-      <div class="item">1</div>
-      <div class="item">2</div>
-      <div class="item">3</div>
-      <div class="item">4</div>
-      <div class="item">5</div>
-      <div class="item">6</div>
-      <div class="item">7</div>
-      <div class="item">8</div>
-      <div class="item">9</div>
-      <div class="item">10</div>
-    </div>
-  </div>
+        <!-- TASK TWO -->
+        <section id="tasktwo">
+            <h2>Grid Placement and Overlapping</h2>
+            <p>
+                Use manual placement to position items in a 3x3 grid. Item 3 should overlap item 1 and item 2.
+            </p>
 
-  <div class="section level4">
-    <h2>Level 4</h2>
-    <div class="nav-bar">
-      <div class="nav-item">Home</div>
-      <div class="nav-item big">Explore</div>
-      <div class="nav-item">Contact</div>
-    </div>
-  </div>
-
-  <div class="section level5">
-    <h2>Level 5</h2>
-    <div class="page">
-      <header>Header</header>
-      <div class="main">
-        <aside class="sidebar">Sidebar</aside>
-        <section class="content">Content</section>
-        <aside class="ads">Ads</aside>
-      </div>
-      <footer>Footer</footer>
-    </div>
-  </div>
+            <section class="grid">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+            </section>
+        </section>
+        <!-- TASK THREE -->
+        <section id="taskthree">
+            <h1>Fix the Broken Grid</h1>
+            <p> An AI tool generated CSS in order to create the layout pictured below, however, the generated code is not working as intended. Identify and fix the mistakes in the CSS to nsure that the layout displays the correct structure. </p>
+            <div class="imgcontainer">
+                <img src="assets/layout.png" alt="intended layout">
+            </div>
+            <div class="grid">
+                <header>
+                    <p>Header</p>
+                </header>
+                <nav>
+                    <p>Navigation</p>
+                </nav>
+                <main>
+                    <p>Main Content</p>
+                </main>
+                <footer>
+                    <p>Footer</p>
+                </footer>
+            </div>
+        </section>
+    </div><!--end container-->
 </body>
+
 </html>
