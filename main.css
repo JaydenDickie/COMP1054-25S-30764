@@ -170,16 +170,14 @@ h1{
     display: flex;
     justify-content: space-evenly;
     /* align-items: vertical; getting errors from this  */
-
 }
+
 .content-center-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 3rem;
     background-color:var(--dark_white);
-
-    
     margin: 0; /* Center the grid container */
     padding: 6rem 1rem; /* Adding white space around the content */
 }
@@ -190,7 +188,6 @@ h1{
         grid-template-columns: 1fr;
     }
 }
-
 
 @media (max-width: 1200px) {
     #middle-content{
@@ -204,7 +201,6 @@ h1{
     .right-sidebar{
         z-index: 0;
     }
-
 }
 
 .item-card{
@@ -240,7 +236,6 @@ h1{
 }
 
 /* resizing the item cards based on screen size*/
-
 @media (max-width: 1400px){
     .item-card{
         max-width: 32rem;
@@ -382,7 +377,6 @@ footer{
     grid-row: 3/4;
     max-height: 5rem;
     font-size: 1.4rem;
-
 }
 
 footer p{
