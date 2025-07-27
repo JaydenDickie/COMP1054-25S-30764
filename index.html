@@ -1,71 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="main.css" rel="stylesheet">
-    <title>CSS Grid Auto-Placement Task</title>
-</head>
-
-<body>
-    <div class="container">
-
-        <h1> CSS Challenge #4 </h1>
-        <!-- TASK ONE -->
-        <section id="taskone">
-            <h2>Grid Auto-Placement Practice</h2>
-            <p>
-                Create a grid layout with 4 equal-width columns and a 10px gap between all rows and columns.
-                Observe how grid items automatically place themselves.
-            </p>
-            <div class="grid">
-                <div class="item">1</div>
-                <div class="item">2</div>
-                <div class="item">3</div>
-                <div class="item">4</div>
-                <div class="item">5</div>
-                <div class="item">6</div>
-                <!-- Feel free to add more .item elements here to test behavior -->
+<!doctype html> 
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/main.css" rel="stylesheet">
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <title>Index</title>
+    </head>
+    <body>
+        <div class="whole-page-grid">
+            <div class="navbar-shadow"></div>
+            <div class="navbar-center">
+                <div class="navbar-flexbox">
+                    <a href="#">Album</a>
+                    <!-- looked up 3 line character and found this -->
+                    <button>☰☰</button>
+                </div>
             </div>
-        </section>
-
-        <!-- TASK TWO -->
-        <section id="tasktwo">
-            <h2>Grid Placement and Overlapping</h2>
-            <p>
-                Use manual placement to position items in a 3x3 grid. Item 3 should overlap item 1 and item 2.
-            </p>
-
-            <section class="grid">
-                <div class="item item1">1</div>
-                <div class="item item2">2</div>
-                <div class="item item3">3</div>
+            <div class="left-sidebar"></div>
+            <section id="middle-content">
+                <div class="top-center-area">
+                    <h1>
+                        Album example
+                    </h1>
+                    <p>Something short and leading about the collection 
+                        below—its contents, the creator, etc. 
+                        Make it short and sweet, but not too short so folks 
+                        don't simply skip over it entirely.
+                    </p>
+                    <p>
+                        <button class="primary-button call-button">Main call to action</button>
+                        <button class="secondary-button call-button">Secondary action</button>
+                    </p>
+                </div>
+                <div class="outer-container">
+                    <div class="content-center-container">
+                        <div class="item-card">
+                            <img src="images/thumbnail.png" alt="empty-thumbnail">
+                            <p class="desc-text">
+                                This is a wider card with supporting
+                             text below as a natural lead-in to additional content. 
+                             This content is a little bit longer.
+                            </p>
+                            <div class="item-card-bottom">
+                                <div class="item-card-button-box">
+                                    <button class="left-card-button hover-invert">View</button>
+                                    <button class="hover-invert">Edit</button>
+                                </div>
+                                <div class="view-card-time"><p>9 min</p></div>
+                            </div>
+                        </div>
+                        <div class="item-card">
+                            <img src="images/thumbnail.png" alt="empty-thumbnail">
+                            <p class="desc-text">
+                                This is a wider card with supporting
+                             text below as a natural lead-in to additional content. 
+                             This content is a little bit longer.
+                            </p>
+                            <div class="item-card-bottom">
+                                <div class="item-card-button-box">
+                                    <button class="left-card-button hover-invert">View</button>
+                                    <button class="hover-invert">Edit</button>
+                                </div>
+                                <div class="view-card-time"><p>9 min</p></div>
+                            </div>
+                        </div>
+                        <div class="item-card">
+                            <img src="images/thumbnail.png" alt="empty-thumbnail">
+                            <p class="desc-text">
+                                This is a wider card with supporting
+                             text below as a natural lead-in to additional content. 
+                             This content is a little bit longer.
+                            </p>
+                            <div class="item-card-bottom">
+                                <div class="item-card-button-box">
+                                    <button class="left-card-button hover-invert">View</button>
+                                    <button class="hover-invert">Edit</button>
+                                </div>
+                                <div class="view-card-time"><p>9 min</p></div>
+                            </div>
+                        </div>
+                        <div class="item-card">
+                            <img src="images/thumbnail.png" alt="empty-thumbnail">
+                            <p class="desc-text">
+                                This is a wider card with supporting
+                             text below as a natural lead-in to additional content. 
+                             This content is a little bit longer.
+                            </p>
+                            <div class="item-card-bottom">
+                                <div class="item-card-button-box">
+                                    <button class="left-card-button hover-invert">View</button>
+                                    <button class="hover-invert">Edit</button>
+                                </div>
+                                <div class="view-card-time"><p>9 min</p></div>
+                            </div>
+                        </div>
+                        <div class="item-card">
+                            <img src="images/thumbnail.png" alt="empty-thumbnail">
+                            <p class="desc-text">
+                                This is a wider card with supporting
+                             text below as a natural lead-in to additional content. 
+                             This content is a little bit longer.
+                            </p>
+                            <div class="item-card-bottom">
+                                <div class="item-card-button-box">
+                                    <button class="left-card-button hover-invert">View</button>
+                                    <button class="hover-invert">Edit</button>
+                                </div>
+                                <div class="view-card-time"><p>9 min</p></div>
+                            </div>
+                        </div>
+                        <div class="item-card">
+                            <img src="images/thumbnail.png" alt="empty-thumbnail">
+                            <p class="desc-text">
+                                This is a wider card with supporting
+                             text below as a natural lead-in to additional content. 
+                             This content is a little bit longer.
+                            </p>
+                            <div class="item-card-bottom">
+                                <div class="item-card-button-box">
+                                    <button class="left-card-button hover-invert">View</button>
+                                    <button class="hover-invert">Edit</button>
+                                </div>
+                                <div class="view-card-time"><p>9 min</p></div>
+                            </div>
+                        </div>
+                        <div class="item-card">
+                            <img src="images/thumbnail.png" alt="empty-thumbnail">
+                            <p class="desc-text">
+                                This is a wider card with supporting
+                             text below as a natural lead-in to additional content. 
+                             This content is a little bit longer.
+                            </p>
+                            <div class="item-card-bottom">
+                                <div class="item-card-button-box">
+                                    <button class="left-card-button hover-invert">View</button>
+                                    <button class="hover-invert">Edit</button>
+                                </div>
+                                <div class="view-card-time"><p>9 min</p></div>
+                            </div>
+                        </div>
+                        <div class="item-card">
+                            <img src="images/thumbnail.png" alt="empty-thumbnail">
+                            <p class="desc-text">
+                                This is a wider card with supporting
+                             text below as a natural lead-in to additional content. 
+                             This content is a little bit longer.
+                            </p>
+                            <div class="item-card-bottom">
+                                <div class="item-card-button-box">
+                                    <button class="left-card-button hover-invert">View</button>
+                                    <button class="hover-invert">Edit</button>
+                                </div>
+                                <div class="view-card-time"><p>9 min</p></div>
+                            </div>
+                        </div>
+                        <div class="item-card">
+                            <img src="images/thumbnail.png" alt="empty-thumbnail">
+                            <p class="desc-text">
+                                This is a wider card with supporting
+                             text below as a natural lead-in to additional content. 
+                             This content is a little bit longer.
+                            </p>
+                            <div class="item-card-bottom">
+                                <div class="item-card-button-box">
+                                    <button class="left-card-button hover-invert">View</button>
+                                    <button class="hover-invert">Edit</button>
+                                </div>
+                                <div class="view-card-time"><p>9 min</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-        </section>
-        <!-- TASK THREE -->
-        <section id="taskthree">
-            <h1>Fix the Broken Grid</h1>
-            <p> An AI tool generated CSS in order to create the layout pictured below, however, the generated code is not working as intended. Identify and fix the mistakes in the CSS to nsure that the layout displays the correct structure. </p>
-            <div class="imgcontainer">
-                <img src="assets/layout.png" alt="intended layout">
-            </div>
-            <div class="grid">
-                <header>
-                    <p>Header</p>
-                </header>
-                <nav>
-                    <p>Navigation</p>
-                </nav>
-                <main>
-                    <p>Main Content</p>
-                </main>
-                <footer>
-                    <p>Footer</p>
-                </footer>
-            </div>
-        </section>
-    </div><!--end container-->
-</body>
-
+            <div class="right-sidebar"></div>
+            <div class="footer-shadow"></div>
+            <footer>
+                <p class="float-right"><a href="#">Back to top</a></p>
+                <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+                <p>
+                    New to Bootstrap? 
+                    <a href="#">Visit the homepage</a>
+                    or read our 
+                    <a href="#">getting started guide.</a>
+                </p>
+            </footer>
+        </div>
+    </body>
 </html>
