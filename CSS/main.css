@@ -1,0 +1,390 @@
+/* setting color variables */
+:root{
+    /* different whites to make certain items pop more*/
+    --white: #fff;
+    --dark_white: #f4f4f49a;
+    --light_white: #f8f9fa;
+    --gray: #6c757d;
+    --dark_gray:#343a40;
+    --blue: rgb(0, 42, 255);
+    --translucent: #a4a4a400;
+}
+
+/* A few things from normalize.css that fix some default formatting */
+html {
+    line-height: 1.15; 
+    font-size: 10px
+}
+
+body {
+  margin: 0;
+}
+
+
+/* setting up the main grid for the page */
+#whole-page-grid{
+    display: grid;
+    grid-template-columns: 1fr 9fr 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+/* navbar area / whole-page-grid location */
+.navbar-shadow{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    max-height: 5rem;
+    
+    background-color: var(--dark_gray); 
+}
+
+.navbar-center{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.navbar-flexbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 1rem;
+    font-size: 1.5rem;
+
+}
+
+.navbar-flexbox button{
+    background-color: var(--dark_gray);
+    color: var(--white);
+    font-size: 2rem;
+    letter-spacing: -.4rem;
+    border: 0;
+}
+
+/* used for testing/setup, kept incase future troubleshooting */
+.left-sidebar{
+    background-color: var(--dark_white); /* placeholder for future troubleshooting / used for testing */
+    grid-column:1/2;
+    grid-row: 2/3;
+    position: relative; /* used for z access / to hide when screen size is smaller */
+}
+
+.right-sidebar{
+    background-color: var(--dark_white); /* placeholder for future troubleshooting / used for testing */
+    grid-column:3/4;
+    grid-row: 2/3;
+    position: relative;/* used for z access / to hide when screen size is smaller */
+}
+
+/* main content of the page / all the images */
+#middle-content{
+    display: grid;
+    position: relative; 
+}
+
+/* styling the navbar links */
+.navbar-flexbox a:link{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2.5rem;
+    
+    margin-right: 2em;
+}
+
+.navbar-flexbox a:focus{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navbar-flexbox a:hover{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navbar-flexbox a:active{
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* the example navbar link doesnt get the 
+ default text-decoration so I added this
+ wouldnt use this normally */
+.navbar-flexbox a:visited{
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* top center text */
+.top-center-area{
+    text-align: center;
+    background-color: var(--dark_white);
+}
+
+h1{
+    font-size: 3rem;
+    margin-top: 8rem;
+    margin-bottom: 0%;
+}
+
+.top-center-area p{
+    padding: 1rem;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    line-height: 1.5;
+
+    font-size: 2.3rem;
+    color: var(--gray);
+}
+
+/* top center buttons */
+.primary-button{
+    background-color: var(--blue);
+    opacity: .7;
+}
+
+.secondary-button{
+    background-color: var(--dark_gray);
+    opacity: .7;
+}
+
+.call-button:hover{
+    opacity: .9;
+}
+
+.call-button{
+    color: var(--white);
+    font-size: 1.6rem;
+    padding: .8rem;
+    border-radius: .3rem;
+    transition-duration: 0.4s;
+    border: none;
+}
+
+/* main content area # this was hard */
+
+.outer-container {
+    width: 100%;
+    background-color: var(--dark_white);
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: vertical; getting errors from this  */
+
+}
+.content-center-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3rem;
+    background-color:var(--dark_white);
+
+    
+    margin: 0; /* Center the grid container */
+    padding: 6rem 1rem; /* Adding white space around the content */
+}
+
+@media (max-width: 600px) {
+    .content-center-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    #middle-content{
+        grid-column:1/4;
+        grid-row: 2/3; /* had to explicitly set row position, causes footer issues without */
+        z-index: 1;
+    }
+    .left-sidebar{
+    z-index: 0;
+    }
+    .right-sidebar{
+    z-index: 0;
+    }
+
+}
+
+.item-card{
+    /* border:1px solid var(--dark_gray); */
+    box-shadow: 0 0 2px;
+    padding:0;
+    background-color: var(--white);
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    border-radius: .3rem;
+    max-width:34rem;
+    color: var(--gray);
+}
+
+.desc-text{
+    margin: 1rem;
+    font-size: 1.8rem;
+    padding-top: 1%;
+    align-self: center;
+    
+    max-width: 90%;
+}
+
+.item-card img{
+    padding:0;
+    margin:0;
+    border:0;
+    border-radius: .3rem;
+    max-width: 34rem;
+    height: auto;
+}
+
+/* resizing the item cards based on screen size*/
+
+@media (max-width: 1400px){
+    .item-card{
+        max-width: 32rem;
+    }
+    .item-card img{
+        max-width: 32rem;
+        height:auto;
+    }
+}
+
+@media (max-width: 1200px){
+    .item-card{
+        max-width: 30rem;
+    }
+    .item-card img{
+        max-width: 30rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 1000px){
+    .item-card{
+        max-width: 24rem;
+    }
+    .item-card img{
+        max-width: 24rem;
+        height: auto;
+    }
+    .content-center-container{
+        gap: 2.5rem
+    }
+}
+
+@media (max-width: 800px){
+    .item-card{
+        max-width: 20rem;
+    }
+    .item-card img{
+        max-width: 20rem;
+        height: auto;
+    }
+    .content-center-container{
+        gap: 2rem
+    }
+}
+
+@media (max-width: 700px){
+    .item-card{
+        max-width: 18rem;
+    }
+    .item-card img{
+        max-width: 18rem;
+        height: auto;
+    }
+    .content-center-container{
+        gap: 1.8rem
+    }
+}
+
+@media (max-width: 600px){
+    .item-card{
+        max-width: 30rem;
+    }
+    .item-card img{
+        max-width: 30rem;
+        height:auto;
+    }
+    .content-center-container{
+        gap: 1.5rem
+    }
+}
+
+/* item card button + time */
+.item-card-bottom{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-left:1.8rem;
+}
+
+.item-card-button-box{
+    display: inline-flex;
+    border-radius:4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background-color: var(--white);
+}
+
+.left-card-button{
+    border-right:0;
+}
+
+
+.item-card-button-box button{
+    padding:.5rem 1rem;
+    color: var(--gray);
+    background-color: var(--white);
+    font-size: 1.6rem;
+}
+
+.hover-invert{
+    transition-duration: 0.2s;
+}
+
+.hover-invert:hover{
+    color:var(--white);
+    background-color:var(--gray);
+}
+
+
+.view-card-time{
+    margin-right: 1.5rem;
+    font-size: 1.3rem;
+}
+
+/* setting positioning of footer backdrop/shadow */ 
+.footer-shadow{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    background-color: var(--dark_white);
+    min-height: 8rem;
+}
+
+/* setting positioning of footer */ 
+footer{     
+    grid-column: 2/3;
+    grid-row: 3/4;
+    max-height: 5rem;
+    font-size: 1.4rem;
+
+}
+
+footer p{
+    color: var(--gray);
+    margin: .6rem;
+}
+
+/* footer link styling */
+footer a{
+    text-decoration: none;
+    color:#007bff; 
+}
+
+/* back to top floater link */ 
+.float-right{
+    float: right; 
+}
