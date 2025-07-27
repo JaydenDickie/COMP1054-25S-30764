@@ -53,6 +53,11 @@ body {
     font-size: 1.5rem;
 }
 
+/*image next to album*/
+.nav-image{
+    max-width: 3rem;
+}
+
 .navbar-flexbox button{
     background-color: var(--dark_gray);
     color: var(--white);
@@ -189,6 +194,7 @@ h1{
     }
 }
 
+/* hiding the sidebars and extending the middle-content */
 @media (max-width: 1200px) {
     #middle-content{
         grid-column:1/4;
@@ -208,21 +214,20 @@ h1{
     box-shadow: 0 0 2px;
     padding:0;
     background-color: var(--white);
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
     /* align-items: center; */
     border-radius: .3rem;
     max-width:34rem;
 }
 
 .desc-text{
-    margin: 1rem;
+    margin: .6rem 1rem;
     font-size: 1.6rem;
     line-height:1.2;
     padding-top: 1%;
     align-self: center;
-    font-weight: 320;
+    font-weight: 400;
     max-width: 90%;
 }
 
@@ -233,6 +238,14 @@ h1{
     border-radius: .3rem;
     max-width: 34rem;
     height: auto;
+    /* allowing the text to overlay ontop the image slightly */
+    position: relative; 
+    z-index: 2;
+}
+
+.lower-half{
+    position: relative; 
+    z-index: 3;
 }
 
 /* resizing the item cards based on screen size*/
@@ -331,14 +344,14 @@ h1{
 
 .item-card-button-box{
     display: inline-flex;
-    border-radius:4px;
+    border-radius:2px;
     overflow: hidden;
     margin-bottom: 1rem;
     background-color: var(--white);
 }
 
 .left-card-button{
-    border-right:0;
+    border-right:0; /*  makes the line between buttons same thickness as top/bottom */
 }
 
 .item-card-button-box button{
@@ -350,6 +363,8 @@ h1{
 
 .hover-invert{
     transition-duration: 0.2s;
+    border-color: var(--gray);
+    border-width: 1px; /* thins the border around the card buttons*/
 }
 
 .hover-invert:hover{
